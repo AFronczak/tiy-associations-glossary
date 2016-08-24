@@ -12,5 +12,8 @@
   .field
     = f.label :subject
     = f.text_field :subject
+  .field
+    = f.label :terms
+    = f.collection_check_boxes(:term_ids, Term.all, :id, :name)
   .actions
     = f.submit 'Save'
